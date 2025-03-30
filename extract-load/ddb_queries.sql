@@ -25,3 +25,6 @@ duckdb;
 .tables
 select * from stg.sales_by_brand limit 10;
 .exit
+
+-- open UI:
+duckdb car_sales.ddb -ui;
