@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: monthly_sales_summary
+    description: "Summary of overall car sales by month including CO2, import, and used car data"
+    columns:
+      - name: Year
+        description: "Sales year"
+      - name: Month
+        description: "Sales month"
+      - name: total_sales
+        description: "Total number of cars sold"
+      - name: Quantity_YoY
+        description: "Year-over-year change in quantity"
+      - name: Import
+        description: "Number of imported cars"
+      - name: Import_YoY
+        description: "Year-over-year change in imports"
+      - name: Used
+        description: "Used car sales (raw value or classification)"
+      - name: Used_YoY
+        description: "Year-over-year change in used car sales"
+      - name: Avg_CO2
+        description: "Average CO2 emissions for the month"
+      - name: Diesel_Share
+        description: "Share of diesel cars sold"
+      - name: Diesel_Share_LY
+        description: "Diesel share same month last year"
+      - name: Quantity_Electric
+        description: "Number of electric cars sold"
+
+  - name: sales_by_brand
+    description: "Car sales aggregated by brand and month, including market share"
+    columns:
+      - name: Year
+        description: "Sales year"
+      - name: Month
+        description: "Sales month"
+      - name: Make
+        description: "Car brand"
+      - name: Quantity
+        description: "Number of cars sold"
+      - name: brand_market_share
+        description: "Market share of the brand in the given month"
+
+  - name: sales_by_model
+    description: "Detailed car sales by model and brand, with market share per model"
+    columns:
+      - name: Year
+        description: "Sales year"
+      - name: Month
+        description: "Sales month"
+      - name: Make
+        description: "Car brand"
+      - name: Model
+        description: "Car model"
+      - name: Quantity
+        description: "Number of cars sold"
+      - name: model_market_share
+        description: "Market share of the model in the given month"
