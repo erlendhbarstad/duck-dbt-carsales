@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: make_monthly_trends
+  - name: monthly_trends
     description: "Monthly sales trends by car brand, including market share and MoM change"
     columns:
       - name: brand
