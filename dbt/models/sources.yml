@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: stg_car_sales
+    schema: stg
+    tables:
+      - name: sales_by_brand
+      - name: sales_by_month
+      - name: sales_by_model

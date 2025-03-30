@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  - name: bronze_sales_by_brand
+    description: "Raw sales data aggregated by car brand"
+    columns:
+      - name: Year
+        description: "Year of sale"
+      - name: Month
+        description: "Month of sale"
+      - name: Make
+        description: "Car brand"
+      - name: Quantity
+        description: "Number of cars sold"
+      - name: Pct
+        description: "Percentage share of total sales that month"
+
+  - name: bronze_sales_by_model
+    description: "Raw sales data aggregated by car model"
+    columns:
+      - name: Year
+        description: "Year of sale"
+      - name: Month
+        description: "Month of sale"
+      - name: Make
+        description: "Car brand"
+      - name: Model
+        description: "Car model"
+      - name: Quantity
+        description: "Number of cars sold"
+      - name: Pct
+        description: "Percentage share of total sales for the model that month"
+
+  - name: bronze_sales_by_month
+    description: "Monthly sales breakdown with various attributes like import status, CO2, and fuel type"
+    columns:
+      - name: Year
+        description: "Year of sale"
+      - name: Month
+        description: "Month of sale"
+      - name: Quantity
+        description: "Total number of cars sold"
+      - name: Quantity_YoY
+        description: "Year-over-year change in quantity"
+      - name: Import
+        description: "Number of imported cars"
+      - name: Import_YoY
+        description: "Year-over-year change in imports"
+      - name: Used
+        description: "Used car sales count (or classification)"
+      - name: Used_YoY
+        description: "Year-over-year change in used car sales"
+      - name: Avg_CO2
+        description: "Average CO2 emissions for the month"
+      - name: Bensin_Co2
+        description: "CO2 emissions for gasoline cars"
+      - name: Diesel_Co2
+        description: "CO2 emissions for diesel cars"
+      - name: Quantity_Diesel
+        description: "Number of diesel cars sold"
+      - name: Diesel_Share
+        description: "Share of diesel cars sold"
+      - name: Diesel_Share_LY
+        description: "Diesel share same month last year"
+      - name: Quantity_Hybrid
+        description: "Number of hybrid cars sold"
+      - name: Quantity_Electric
+        description: "Number of electric cars sold"
+      - name: Import_Electric
+        description: "Number of imported electric cars"

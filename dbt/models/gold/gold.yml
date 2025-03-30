@@ -1,0 +1,90 @@
+version: 2
+
+models:
+  - name: make_monthly_trends
+    description: "Monthly sales trends by car brand, including market share and MoM change"
+    columns:
+      - name: brand
+        description: "Car brand"
+      - name: date
+        description: "Date representing the first of the month"
+      - name: sales
+        description: "Number of cars sold that month for the brand"
+      - name: sales_last_month
+        description: "Sales count for the previous month (same brand)"
+      - name: sales_mom_change
+        description: "Month-over-month change in sales"
+      - name: brand_market_share
+        description: "Market share of the brand that month"
+
+  - name: model_performance_snapshot
+    description: "Latest month's top-selling car models ranked by volume and market share"
+    columns:
+      - name: date
+        description: "Date representing the latest full month of sales"
+      - name: brand
+        description: "Car brand"
+      - name: model
+        description: "Car model"
+      - name: sales
+        description: "Number of cars sold"
+      - name: model_market_share
+        description: "Share of sales for this model in that month"
+      - name: model_rank
+        description: "Sales rank for the model based on total units sold"
+
+  - name: sales_summary_monthly
+    description: "Wide monthly summary of national car sales including import, used, diesel, EV, and CO2 metrics"
+    columns:
+      - name: date
+        description: "Date representing the first of the month"
+      - name: total_sales
+        description: "Total number of cars sold"
+      - name: total_sales_yoy
+        description: "Year-over-year change in sales"
+      - name: Import
+        description: "Number of imported cars"
+      - name: Import_YoY
+        description: "Year-over-year change in imports"
+      - name: used_cars
+        description: "Used car sales count"
+      - name: used_yoy
+        description: "Year-over-year change in used car sales"
+      - name: Avg_CO2
+        description: "Average CO2 emissions"
+      - name: Diesel_Share
+        description: "Percentage of cars sold that were diesel"
+      - name: Diesel_Share_LY
+        description: "Diesel share same month last year"
+      - name: electric_cars
+        description: "Number of electric vehicles sold"
+      - name: hybrid_sales
+        description: "Number of hybrid vehicles sold"
+      - name: diesel_sales
+        description: "Number of diesel vehicles sold"
+
+  - name: ev_trends
+    description: "Tracks EV, hybrid, and diesel car sales over time, with market share and growth metrics"
+    columns:
+      - name: date
+        description: "Date representing the first of the month"
+      - name: total_sales
+        description: "Total number of cars sold that month"
+      - name: electric_sales
+        description: "Number of electric vehicles sold"
+      - name: hybrid_sales
+        description: "Number of hybrid vehicles sold"
+      - name: diesel_sales
+        description: "Number of diesel vehicles sold"
+      - name: ev_share
+        description: "Share of EVs out of total sales"
+      - name: hybrid_share
+        description: "Share of hybrids out of total sales"
+      - name: diesel_share
+        description: "Share of diesels out of total sales"
+      - name: ev_mom_change
+        description: "Month-over-month change in EV sales"
+      - name: hybrid_mom_change
+        description: "Month-over-month change in hybrid sales"
+      - name: ev_3mo_avg
+        description: "Rolling 3-month average of EV sales"

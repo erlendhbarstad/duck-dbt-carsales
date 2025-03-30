@@ -306,7 +306,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "dbt-core", specifier = ">=1.9.3" },
-    { name = "dbt-duckdb", specifier = ">=1.9.2" },
+    { name = "dbt-duckdb", specifier = ">=1.5.2" },
     { name = "duckdb", specifier = ">=1.2.1" },
     { name = "streamlit", specifier = ">=1.44.0" },
 ]
